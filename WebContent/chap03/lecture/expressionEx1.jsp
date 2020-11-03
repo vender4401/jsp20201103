@@ -12,84 +12,42 @@
 </head>
 <body>
 
+<h1>Lorem ipsum dolor.</h1>
 <%
-for (int i =0; i<5; i++) {
-%>
-	<h1>Lorem ipsum dolor.</h1>
-
-<%
-}
+String name = "java";
 %>
 
-
+<%= name %>
 
 <%
-java.util.List<String> list = new java.util.ArrayList<>(); 
-list.add("java");
+java.util.List<String> list = new java.util.ArrayList<>();
 list.add("jsp");
+list.add("java");
 list.add("spring");
-list.add("dbms");
 %>
-
 <ul>
 <%
-for (String item: list) {
+for(String item : list) {	
 %>
-<li>
-<% out.print("item"); %>
-</li>
-	
-	
+<li><%= item %></li>
 <%
 }
 %>
+
+
 </ul>
 
-<%
-boolean danger = false;
-%>
-<%
-if (danger) {
-%>
-<h1 class="text-danger">DANGER!!</h1>	
-
-<%
-} else {
-%>
-<h1 class="text-info">INFO~~~~</h1>	
-<%
-}
-%>
 
 
-<%
-for (int i=0;i<5; i++){	
-	for (int j=0;j<i;j++) {
-		
-%>
-	*
-<%
-	}
-%>
-	<br>
-<%
-}
+
+
+<% 
+String status = "danger";
 %>
 
+<h1 class="text-<%= status %>">Lorem ipsum dolor.</h1>
 
 
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

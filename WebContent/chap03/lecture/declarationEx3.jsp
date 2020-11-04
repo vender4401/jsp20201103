@@ -75,10 +75,5 @@ for (int num : lotto) {
 <%
 }
 %>
-
-
-
-
-
 </body>
 </html>

@@ -60,15 +60,6 @@ for (int i=2; i <=255; i++) {
 }
 %>
 
-<%
-for (int i=0;i<10; i++) {
-%>
-	<a href="http://172.30.1.30:8080/myjsp/chap05/sample/post.jsp?title=aa&body=bb">aa</a>
-<%
-}
-%>
-
-
 
 
 

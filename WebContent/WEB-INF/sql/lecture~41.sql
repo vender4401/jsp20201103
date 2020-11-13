@@ -1,0 +1,1 @@
+SELECT loc FROM department WHERE dno = 10;

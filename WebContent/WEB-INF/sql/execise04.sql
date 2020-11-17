@@ -19,9 +19,11 @@ SELECT eno, ename, NVL(manager, 0) MANAGER FROM employee;
 
 --7번 DECODE 함수로 직급에 따라 급연인상.
 --직급이 ANAIYST 200, SALESMAN 180, MANAGER 150, CLERK 100 인상
-SELECT job, eno, ename, salary, NVL(commission, 0), DECODE (JOB, 'ANAIYST', salary+200,
+SELECT eno, sal FROM
+(SELECT job, eno, ename, salary, NVL(commission, 0), DECODE (JOB, 'ANAIYST', salary+200, 
                                                                 'SALESMAN', salary+180, 
                                                                 'MANAGER', salary+150, 
                                                                 'CLERK', salary+100, 
-                                                                salary) "인상 된 급여" + NVL(commission, 0)
-                                                                FROM employee ORDER BY ename;
+                                                                salary) sal  
+                                                                FROM employee ORDER BY ename);
+                                                            
